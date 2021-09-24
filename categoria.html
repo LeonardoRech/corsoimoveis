@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/categoria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="script.js"></script>
+    <title>CATEGA</title>
+</head>
+<body>
+    <div class="container">
+        <div class="hamburguer">
+            <div class="line" id="line1"></div>
+            <div class="line" id="line2"></div>
+            <div class="line" id="line3"></div>
+            <span>fechar</span>
+        </div>
+        <aside claSs="sidebar">
+            <h2><i class="fas fa-filter"></i> Refinar busca</h2>
+            <form action="">
+                <div class="botoes">
+                        <label class="input-group-text" for="inputGroupSelect01"></label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Dormitórios</option>
+                          <option value="1">1 Dormitório</option>
+                          <option value="2">2 Dormitórios</option>
+                          <option value="3">3 Dormitórios</option>
+                        </select>
+                        <label class="input-group-text" for="inputGroupSelect01"></label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Vagas de Garagem</option>
+                          <option value="1">1 Vaga</option>
+                          <option value="2">2 Vagas</option>
+                          <option value="3">3 Vagas</option>
+                        </select>
+                        <label class="input-group-text" for="inputGroupSelect01"></label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Perfil</option>
+                          <option value="1">Lançamento</option>
+                          <option value="2">Em Construção</option>
+                          <option value="3">Novo</option>
+                          <option value="3">Usado</option>
+                        </select>
+                        <label class="input-group-text" for="inputGroupSelect01"></label>
+                        <select class="form-select" id="inputGroupSelect01">
+                          <option selected>Mobilia</option>
+                          <option value="1">Mobiliado</option>
+                          <option value="2">Semi-Mobiliado</option>
+                        </select>
+                </div>
+                <div class="labels">
+                    <label for="prazo">Prazo</label>
+                    <input type="range" name="prazo" id="prazo" min="1" max="10">
+                    <label id="preco">R$ 0,00</label>
+                </div>
+                <div class="checkboxes">
+                    <h3>Ordenar:</h3>
+                    <div class="check-box">
+                        <input type="checkbox" name="prazo"> 
+                        <label for="prazo">Maior Valor</label>
+                    </div> <br>
+                    <div class="check-box">
+                        <input type="checkbox" name="prazo">  
+                        <label for="prazo">Menor Valor</label>
+                    </div> <br>
+                    <div class="check-box">
+                        <input type="checkbox" name="prazo"> 
+                        <label for="prazo">Adicionados Recentemente</label>
+                    </div>
+                </div>
+                <button type="submit">Procurar</button>
+            </form>
+        </aside>
+    </div>
+    <nav>
+        <div class="logo"></div>
+        <h2>Vendas</h2>
+    </nav>
+    <div class="corpo">
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+        <div class="anuncio">
+            <div class="imagem">
+                <img src="https://marroquim.sfo2.cdn.digitaloceanspaces.com/2017/06/803e62476eac64ca642481e3e2f02e73_29_perspectiva_cidade_de_guimar_es-1.jpg" alt="">
+            </div>
+            <div class="descricao">
+                <h3>TROPICAL PALACE</h3>
+                <p class="codigo">Código: 2463</p><hr>
+                <h4><i class="fas fa-map-pin"></i> ITAPEMA - MEIA PRAIA</h4>
+                <div class="desc">
+                    <h5><i class="fas fa-car"></i> VAGAS</h5>
+                    <h5><i class="fas fa-bed"></i></i> DORM.</h5>
+                    <h5><i class="fas fa-ruler-combined"></i> ÁREA</h5>
+                    <h5><i class="fas fa-couch"></i></i> MOBÍLIA</h5>
+                </div>
+                <div class="desc">
+                    <h5 class="descricao-valores">2</h5>
+                    <h5 class="descricao-valores">3</h5>
+                    <h5 class="descricao-valores">180m²</h5>
+                    <h5 class="descricao-valores">Sim</h5>
+                </div>
+            </div>
+            <div class="valor">
+                <h3>R$ 1.000.000,00</h3>
+                <button><a href="">VER MAIS</a></button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

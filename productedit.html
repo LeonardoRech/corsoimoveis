@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/editar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Editar</title>
+</head>
+<body>
+    <nav>
+        <div class="logo"></div>
+        <h2>Editar</h2>
+    </nav>
+    <div class="corpo">
+        <h2 class="titulo-pagina">Cadastro de Imóveis</h2>
+        <form action="">
+            <fieldset class="informacoes">
+                <div>
+                    <label for="">Nome:</label>
+                    <input type="text" name="nome" id="nome">
+                </div>
+                <div>
+                    <label for="">Localização:</label>
+                    <input type="text" name="local" id="local">
+                </div>
+                <div>
+                    <label for="">Valor:</label>
+                    <input type="text" name="valor" id="valor">
+                </div>
+                <div>
+                    <label for="">Vagas:</label>
+                    <input type="text" name="vagas" id="vagas">
+                </div>
+                <div>
+                    <label for="">Área:</label>
+                    <input type="text" name="area" id="area">
+                </div>
+            </fieldset>
+            <div>
+                <label for="">Perfil: </label>
+                <label for="">
+                    <input type="radio" name="perfil" value="pronto" checked>Pronto
+                </label>
+                <label for="">
+                    <input type="radio" name="semi" value="semi">Semi-mobiliado
+                </label>
+                <label for="">
+                    <input type="radio" name="imobiliado" value="imobiliado">Imobiliado
+                </label>
+                <label for="">
+                    <input type="radio" name="construcao" value="construcao">Em construção
+                </label>
+                <label for="">
+                    <input type="radio" name="planta" value="planta">Na Planta
+                </label>
+            </div>
+            <div>
+                <label for="">Tipo:</label>
+                <select name="tipo" id="tipo">
+                    <option selected disabled value="">Selecione</option>
+                    <option value="casa">Casa</option>
+                    <option value="apto">Apartamento</option>
+                    <option value="sala">Sala Comercial</option>
+                </select>
+            </div>
+            <fieldset>
+                <div>
+                    <label for="">Características do Apartamento</label>
+                    <input type="checkbox" id="churrasqueira" name="churrasqueira" value="churrasqueira">
+                    <label for="churrasqueira">Churrasqueira</label>
+                    <input type="checkbox" id="sala-jantar" name="sala-jantar" value="sala-jantar">
+                    <label for="sala-jantar">Sala de Jantar</label>
+                </div>
+            </fieldset>
+            <div>
+                <label for="">Sobre o Edifício</label>
+                <textarea name="edificio" id="edificio" rows="10" style="width: 26em;"></textarea>
+            </div>
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+</body>
+</html>

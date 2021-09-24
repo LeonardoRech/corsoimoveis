@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background: rgb(255, 255, 255);
+}
+
+/*------------------------------- NAV ----------------------------------------*/
+
+nav{
+    background: linear-gradient(to bottom, rgb(51, 51, 51) 75%, rgb(46, 46, 46));
+    height: 120px; 
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}
+
+
+nav .logo{
+    margin-top: 25px;
+    margin-left: 10%;
+    background: url('../img/logo_oficial.png');
+    height: 68px;
+    width: 200px;
+}
+
+nav h2{
+    margin: auto;
+    font-size: 80px;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 42.5%;
+    text-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+/* ------------------------------- CORPO ------------------------------ */
+.corpo{
+    height: 200vh;
+    padding: 1% 10%;
+    background: black;
+    font-family: 'Montserrat';
+    font-weight: 300;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.titulo-pagina{
+    color: white;
+    text-align: center;
+    font-weight: 300;
+    margin-bottom: 20px;
+    text-shadow: sienna 0 0 5px;
+}
+
+form{
+    padding: 1% 5%;
+    background: sienna;
+}
+
+.informacoes{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.informacoes input{
+    height: 25px;
+    border-radius: 5px;
+}

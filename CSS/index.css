@@ -1,0 +1,570 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700&family=Josefin+Slab:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&family=Muli:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+body{
+    background: rgb(48, 48, 48);
+}
+
+:root {
+    --font-primary: "Baloo Da 2", serif;
+    --font-secundary: "Josefin Slab", serif;
+    --font-action: "Muli", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ------------------------------- MENU HAMB ------------------------------ */
+
+.hamburguer {
+    /* background-color: red; */
+    width: 2rem;
+    height: 2rem;
+    position: fixed;
+    z-index: 100;
+    right: 6rem;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+
+.show-menu .hamburguer {
+    right: 25rem;
+}
+
+.line {
+    width: 100%;
+    height: 0.1rem;
+    background-color: #fff;
+    box-shadow: 0.1rem 0.1rem 1px #000;
+    transition: transform 1s;
+}
+
+.show-menu #line1 {
+    transform: rotate(45deg) translate(0.3rem, 0.45rem);
+}
+
+.show-menu #line2 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.show-menu #line3 {
+    transform: rotate(-45deg) translate(0.3rem, -0.45rem);
+}
+
+.hamburguer span {
+    position: absolute;
+    left: 3rem;
+    height: 2rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 123, 0);
+    color: #ffffff;
+    font-family: var(--font-action);
+    opacity: 0;
+}
+
+.hamburguer span::before {
+    content: "";
+    position: absolute;
+    border-right: 0.5rem solid rgb(255, 123, 0);
+    border-top: 0.5rem solid transparent;
+    border-left: 0.5rem solid transparent;
+    border-bottom: 0.5rem solid transparent;
+    left: -1rem;
+}
+
+.show-menu .hamburguer:hover span {
+    opacity: 1;
+}
+
+.sidebar {
+    width: 30rem;
+    height: 100vh;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    transition: all 1s;
+    z-index: 80;
+}
+
+.show-menu .sidebar {
+    right: 0;
+}
+
+.menu {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.menu-item {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.menu-link {
+    font-family: var(--font-action);
+    font-size: 2rem;
+    color: #555;
+    transition: color 1s;
+}
+
+.menu-link:hover {
+    color: rgb(255, 123, 0);
+}
+
+.social-media {
+    position: absolute;
+    bottom: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-media i {
+    background-color: rgb(255, 123, 0);
+    color: rgba(255, 255, 255, 1);
+    height: 2.5rem;
+    width: 2.5rem;
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: background-color 1s;
+}
+
+.social-media i:hover {
+    background-color: rgb(247, 157, 74);
+}
+ 
+
+/* --------------------------------------- HEADER ----------------------------- */
+
+header {
+    margin-bottom: 20px;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0px 0px 5px rgb(56, 30, 30);
+}
+
+.img-wrapper {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgb(0, 0, 0);
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.8;
+    filter: blur(5px);
+    animation: zoom 25s;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.banner {
+    position: absolute;
+    margin-top: -85vh;
+    left: 10%;
+}
+
+.banner h1 {
+    color: #ffffff;
+    font-size: 8em;
+    font-family: var(--font-primary);
+    font-weight: 200;
+    font-style: italic;
+    text-shadow: 5px 0px 5px rgb(216, 141, 2);
+    line-height: 3.5rem;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: moveBanner 1s 0.5s forwards;
+}
+
+.banner .logo{
+    background-image: url("img/logo_maior.png");
+    width: 370px;
+    height: 120px;
+    margin-top: 10px;
+    margin-bottom: 150px;
+    opacity: 0;
+    animation: moveBanner 1s 0.7s forwards;
+}
+
+.banner button {
+    font-family: var(--font-action);
+    color: #fff;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    letter-spacing: 0.1rem;
+    background: linear-gradient(to right, rgb(56, 30, 30), rgb(109, 54, 2));
+    padding: 1rem 3rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    animation: moveBanner 1s 0.9s forwards;
+}
+
+.banner button:hover {
+    opacity: 0.9;
+    font-size: 3em;
+    color: red;
+    background: rgba(245, 245, 245, 0.541);
+    box-shadow: 0px 0px 20px red;
+    transition: .5s;
+}
+
+@keyframes moveBanner {
+    0% {
+        transform: translateY(10rem) rotateY(-30deg);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+        opacity: 1;
+    }
+}
+
+
+/*--------------------------- SLIDER --------------------------- */
+
+
+
+.recentes {
+    margin-left: 5%;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 0 5px rgb(253, 143, 0);
+}
+
+a {
+    text-decoration: none;
+}
+
+section.slider {
+    height: 600px;
+    width: 90%;
+    border-radius: 5px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    box-shadow: 0 0 10px rgb(117, 63, 63);
+    padding: 5px;
+}
+
+.box {
+    width: 300px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px;
+    box-shadow: 0 0 10px rgb(126, 67, 67);
+}
+
+.box span {
+    text-align: center;
+    width: 100%;
+}
+
+.slide-img {
+    background: url('https://i0.wp.com/www.dallo.com.br/wp-content/uploads/dallo-home-home-34-1920x0-c-default.jpg');
+    background-size: cover;
+    height: 400px;
+    position: relative;
+}
+
+div.preco {
+    height: 100%;
+}
+
+div.preco h2 {
+    position: absolute;
+    bottom: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 45px;
+    margin-bottom: 0px;
+    text-shadow: 0 0 2px red;
+}
+
+.slide-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.detail-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    font-family: calibri;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.type {
+    display: flex;
+    flex-direction: column;
+}
+
+.type a {
+    color: #000000;
+    margin: 5px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 200;
+    letter-spacing: 0.5px;
+    padding-right: 8px;
+}
+
+.text span {
+    color: rgba(26, 26, 26, 0.5);
+}
+
+.price {
+    color: #333333;
+    font-weight: 600;
+    font-size: 1.1rem;
+    font-family: poppins;
+    letter-spacing: 0.5px;
+}
+
+.overlay {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: rgb(56, 30, 30, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buy-btn {
+    width: 1160px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: wheat;
+    color: #252525;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-family: calibri;
+    border-radius: 20px;
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+}
+
+.buy-btn:hover {
+    color: white;
+    background: rgb(56, 30, 30);
+    transition: all ease 0.3s;
+}
+
+.overlay {
+    visibility: hidden;
+}
+
+.slide-img:hover .overlay {
+    visibility: visible;
+    animation: fade 0.5s
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slider {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+
+.slider i{
+    color: rgb(56, 30, 30, 0.9);
+}
+
+
+/* ----------------------------------------- FOOTER ---------------------------- */
+
+
+
+.logo-footer {
+    text-align: center;
+    font-family: 'Monoton', sans-serif;
+    font-size: 3rem;
+    line-height: 4rem;
+}
+
+.cresci {
+    font-size: 40px;
+    color: rgb(133, 58, 58);
+    font-family: 'Wire One';
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    display: inline-flex;
+    font-size: 2rem;
+    line-height: 4rem;
+    padding: 0 0% 5% 0%;
+}
+
+.leftt {
+    margin-left: 100px;
+}
+
+.leftt a {
+    color: rgb(133, 58, 58);
+}
+
+.rightt {
+    margin-right: 100px;
+    color: rgb(133, 58, 58);
+}
+
+.centerr {
+    margin-left: 200px;
+    color: rgb(133, 58, 58);
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+}
+
+.quemsomos{
+    text-align: center;
+    box-shadow: 0 0 10px rgb(133, 58, 58);
+    border-top: 1px solid rgb(133, 58, 58);
+    border-bottom: 1px solid rgb(133, 58, 58);
+    background: rgb(31, 31, 31);
+    padding: 30px 100px;
+    margin-bottom: 100px;
+}
+
+.quemsomos .titulo h3{
+   margin-top: 71px;
+   margin-left: 150px;
+}
+
+.quemsomos h2{
+    color:  rgb(117, 63, 63);
+    text-transform: uppercase;
+    font-size: 42px;
+    text-shadow: coral 0 0 3px;
+    margin-bottom: 50px;
+}
+
+.quemsomos p{
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+}
+
+.quemsomos .itapema{
+    display: flex;
+}
+
+.quemsomos .conteudo{
+    width: 33%;
+    height: 100px;
+    margin-right: 1px;
+    display: flex;
+}
+
+.quemsomos .conteudo div{
+    margin-left: 15px;
+    height: 100px;
+}
+
+.quemsomos .titulo h3{
+    margin-top: 35px;
+    margin-left: 50px;
+    font-size: 30px;
+    font-weight: 500;
+    color: rgb(117, 63, 63);
+}
+
+.quemsomos .titulo{
+    width: 30%;
+}
+
+.quemsomos .dado{
+    width: 68%;
+}
+
+.quemsomos .dado p{
+    text-align: left;
+    font-size: 24px;
+    font-weight: 200;
+    margin-top: 5px;
+}
+
+.logo2{
+    background-image: url("img/logo_maior.png");
+    width: 370px;
+    height: 120px;
+    margin: auto;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background-color: white;
+    margin: 8px;
+}
